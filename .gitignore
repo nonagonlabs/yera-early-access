@@ -1,0 +1,7 @@
+# Python
+__pycache__/
+*.py[oc]
+
+# Tutorials
+tutorials/graph.html
+tutorials/lib/
