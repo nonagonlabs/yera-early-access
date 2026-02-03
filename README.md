@@ -2,14 +2,16 @@
 
 Firstly we'd like to thank you so much for your time!
 
-This is our very early access product where we want to learn and iterate.
+This is our very early access product where we learn and iterate. 
+Please forgive the rough edges. 
 
 We want to learn as much as possible while helping you with your AI use cases.
 If you have any questions, concerns or just want some guidance we are always happy to
 help.
 
 The best way to get in touch is the Slack channel you should be in, or email us.
-There is also a Discord lined up because we appear to be already outgrowing the Slack channel.
+We're also getting a Discord lined up because we appear to be outgrowing the Slack channel 
+already.
 
 ## Introduction
 
@@ -29,20 +31,25 @@ and then for your management
 
 ### Prerequisites
 
-The minimum supported python version is 3.10. The library is tested on 3.10, 3.11 and 3.12.
-Yera currently supports the following providers:
+The minimum supported python version is 3.10. The library is tested in our cicd jobs on 
+3.10, 3.11 and 3.12. Yera currently supports the following providers:
 
 - OpenAI
 - Anthropic
 - Ollama (if installed)
 - Llamacpp (if installed)
 - Azure AI Foundry (OpenAI model deployments only)
-  In the next iteration we'll be adding
+
+In the next iteration we'll be adding
 - AWS Bedrock
 - The rest of Azure Foundry
 - Mistral
-  Yera's setup will try to detect your creds and available models on setup. More on that
-  in the setup section.
+
+Yera's setup will try to detect your creds and available models on setup. More on that
+in the setup section.
+
+This has not been tested on Windows yet. If any of you guys have trouble please let us 
+know straight away. 
 
 ### Installation
 
@@ -70,13 +77,20 @@ if you want `llama-cpp` or `ollama` there are extras under `yera[llama-cpp]` and
 
 ### Setup
 
+**N.B.** you may get a notification from your system
+keychain asking for permission to use it. This is normal and is how Yera stores credentials safely.
+
 You can kick off this whole process with
 
 ```
-yera setup
+yera setup  # uv tool or pip install
+```
+or if you did `uv add`
+```shell
+uv run yera setup
 ```
 
-an explanation of what it does is below.
+an explanation of what it does is below. 
 
 Yera has a command line setup helper that will automatically set up your config, credentials
 and find your available models. For each provider the auto-discovery requires the following
@@ -85,8 +99,9 @@ and find your available models. For each provider the auto-discovery requires th
 - **Anthropic**: an `ANTHROPIC_API_KEY` env variable
 - **Azure**: you must be logged in with `az login`
 - **Ollama**: ollama just has to be up and running
-- **Llama-cpp**: it will look in `./model` then a user-level data directory
-  (OS-dependent: on macOS it's `/Users/jackwright/Library/Application Support`)
+- **Llama-cpp**: it will look in `./model` then a user-level data directory determined 
+by `platformdirs.user_data_dir` (OS-dependent: on macOS it's 
+`/Users/<your name>/Library/Application Support`)
 
 Your credentials will be added to your operating system keyring so Yera knows where
 to find them. This is encrypted at rest and much more secure than env vars, .env files
@@ -125,6 +140,10 @@ Once that's ready you can run it in the CLI.
 
 ```shell
 yera run chatbot.py
+```
+or if you ran `uv add`
+```shell
+uv run yera run chatbot.py
 ```
 
 You should see a browser window open running your first chatbot.

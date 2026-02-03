@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "ipykernel>=7.1.0",
+    "ollama>=0.6.1",
     "pyvis>=0.3.2",
     "yera[llama-cpp]>=0.2.0",
 ]
