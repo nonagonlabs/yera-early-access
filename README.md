@@ -149,6 +149,16 @@ uv run yera run chatbot.py
 You should see a browser window open running your first chatbot.
 If that's all worked you're ready to start on our tutorial notebooks.
 
+### Running notebooks
+
+```shell
+uv run jupyter lab
+```
+
+Interactive Yera agents can be invoked in a notebook to commence an in-line conversation, eg [Basic Chatbot](tutorials/Basic%20Chatbot.ipynb).
+
+You can also invoke pipeline agents which run autonomously, without user interaction, eg [Entity Recognition Demo](tutorials/Entity%20Recognition%20Demo.ipynb).
+
 ### CLI Reference
 
 The CLI has four commands:

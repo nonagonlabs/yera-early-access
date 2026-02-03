@@ -2,6 +2,9 @@
 __pycache__/
 *.py[oc]
 
+# Jupyter
+.ipynb_checkpoints/
+
 # Tutorials
 tutorials/graph.html
 tutorials/lib/
