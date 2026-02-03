@@ -3217,7 +3217,7 @@ wheels = [
 
 [[package]]
 name = "yera"
-version = "0.2.0"
+version = "0.2.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anthropic" },
@@ -3253,9 +3253,9 @@ dependencies = [
     { name = "uvicorn" },
     { name = "virtualenv" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f0/5f/552208ed8959446c1683954cfcf48851fc29d2fb2badddc39481115d0e5b/yera-0.2.0.tar.gz", hash = "sha256:a488ebd1a603fd6fc702118f0e2cee59a3175bc5c2eb648a5d16722c7fab19ed", size = 1760609, upload-time = "2026-02-02T16:15:52.533Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/fb/58/a4ae3630d16348964a37c9965d594fa17a68b29e6a8fbe0f145bc015adab/yera-0.2.1.tar.gz", hash = "sha256:f4bb4c6a6dadd36bc398a113e77261573f280744b855bffdcece9c2eeba9eb4e", size = 1760619, upload-time = "2026-02-03T13:27:29.121Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/9c/0b/fd5b0d00887b156738a9b9b4455c974077e6bdc66bb5079ae5b8674e04ba/yera-0.2.0-py3-none-any.whl", hash = "sha256:db40b6e759e36a56c6f69926d55d303d9036ea0062997561f6e288ceaec0964a", size = 1516395, upload-time = "2026-02-02T16:15:50.565Z" },
+    { url = "https://files.pythonhosted.org/packages/a6/5c/88c2457928c9748d8ef5a11c3dd44e9f1237df291d79be5b0e187319838b/yera-0.2.1-py3-none-any.whl", hash = "sha256:eb605e44df0526e44ca32c879fde7ab033bc2849595d91eac6395b35ddbe235e", size = 1516418, upload-time = "2026-02-03T13:27:27.212Z" },
 ]
 
 [package.optional-dependencies]
@@ -3281,7 +3281,7 @@ requires-dist = [
     { name = "jupyterlab", specifier = ">=4.5.3" },
     { name = "ollama", specifier = ">=0.6.1" },
     { name = "pyvis", specifier = ">=0.3.2" },
-    { name = "yera", extras = ["llama-cpp"], specifier = ">=0.2.0" },
+    { name = "yera", extras = ["llama-cpp"], specifier = ">=0.2.1" },
 ]
 
 [[package]]
