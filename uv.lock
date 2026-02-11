@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.10"
 resolution-markers = [
     "python_full_version >= '3.14' and sys_platform == 'win32'",
@@ -314,6 +314,34 @@ wheels = [
 [package.optional-dependencies]
 css = [
     { name = "tinycss2" },
+]
+
+[[package]]
+name = "boto3"
+version = "1.42.46"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "botocore" },
+    { name = "jmespath" },
+    { name = "s3transfer" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d9/87/1ccd436a6815c18107aa74aa2b7b2745dc5a1db83cf58afc591df2755775/boto3-1.42.46.tar.gz", hash = "sha256:c8c82ab34dd8d2d4d93a562d0e75fca164efa644651d3ccddb0f4aa88a481b38", size = 112795, upload-time = "2026-02-10T20:38:10.784Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ce/41/978d749a6604bf93e05e8be56db07eb1402ffe576e1bb9b65aa391ebcb73/boto3-1.42.46-py3-none-any.whl", hash = "sha256:679cf4930e559621653bbd1439cf6e93b138cbaf46e36e5d7d95319999b7a356", size = 140606, upload-time = "2026-02-10T20:38:08.175Z" },
+]
+
+[[package]]
+name = "botocore"
+version = "1.42.46"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "jmespath" },
+    { name = "python-dateutil" },
+    { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/86/2d/6f6101f567a69c3b2ebe3f1f81bfd56eda9d5f6f466d0d919293499ab050/botocore-1.42.46.tar.gz", hash = "sha256:fc290b33aba6e271f627c4f46b8bcebfa1a94e19157d396732da417404158c01", size = 14948751, upload-time = "2026-02-10T20:37:58.663Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a0/88/5c2f4e65fe8dba7709a219b768e5ac89a112c6dde9527a5009cb82ee9124/botocore-1.42.46-py3-none-any.whl", hash = "sha256:f7459fcf586f38a3b0a242a172d3332141c770a3f5767bbb21e79d810db95d75", size = 14622519, upload-time = "2026-02-10T20:37:54.223Z" },
 ]
 
 [[package]]
@@ -1178,6 +1206,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/d2/73/a009f41c5eed71c49bec53036c4b33555afcdee70682a18c6f66e396c039/jiter-0.13.0-graalpy312-graalpy250_312_native-macosx_11_0_arm64.whl", hash = "sha256:ff732bd0a0e778f43d5009840f20b935e79087b4dc65bd36f1cd0f9b04b8ff7f", size = 303808, upload-time = "2026-02-02T12:37:52.092Z" },
     { url = "https://files.pythonhosted.org/packages/c4/10/528b439290763bff3d939268085d03382471b442f212dca4ff5f12802d43/jiter-0.13.0-graalpy312-graalpy250_312_native-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:ab44b178f7981fcaea7e0a5df20e773c663d06ffda0198f1a524e91b2fde7e59", size = 337384, upload-time = "2026-02-02T12:37:53.582Z" },
     { url = "https://files.pythonhosted.org/packages/67/8a/a342b2f0251f3dac4ca17618265d93bf244a2a4d089126e81e4c1056ac50/jiter-0.13.0-graalpy312-graalpy250_312_native-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7bb00b6d26db67a05fe3e12c76edc75f32077fb51deed13822dc648fa373bc19", size = 343768, upload-time = "2026-02-02T12:37:55.055Z" },
+]
+
+[[package]]
+name = "jmespath"
+version = "1.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d3/59/322338183ecda247fb5d1763a6cbe46eff7222eaeebafd9fa65d4bf5cb11/jmespath-1.1.0.tar.gz", hash = "sha256:472c87d80f36026ae83c6ddd0f1d05d4e510134ed462851fd5f754c8c3cbb88d", size = 27377, upload-time = "2026-01-22T16:35:26.279Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/14/2f/967ba146e6d58cf6a652da73885f52fc68001525b4197effc174321d70b4/jmespath-1.1.0-py3-none-any.whl", hash = "sha256:a5663118de4908c91729bea0acadca56526eb2698e83de10cd116ae0f4e97c64", size = 20419, upload-time = "2026-01-22T16:35:24.919Z" },
 ]
 
 [[package]]
@@ -2849,6 +2886,18 @@ wheels = [
 ]
 
 [[package]]
+name = "s3transfer"
+version = "0.16.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "botocore" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/05/04/74127fc843314818edfa81b5540e26dd537353b123a4edc563109d8f17dd/s3transfer-0.16.0.tar.gz", hash = "sha256:8e990f13268025792229cd52fa10cb7163744bf56e719e0b9cb925ab79abf920", size = 153827, upload-time = "2025-12-01T02:30:59.114Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fc/51/727abb13f44c1fcf6d145979e1535a35794db0f6e450a0cb46aa24732fe2/s3transfer-0.16.0-py3-none-any.whl", hash = "sha256:18e25d66fed509e3868dc1572b3f427ff947dd2c56f844a5bf09481ad3f3b2fe", size = 86830, upload-time = "2025-12-01T02:30:57.729Z" },
+]
+
+[[package]]
 name = "secretstorage"
 version = "3.5.0"
 source = { registry = "https://pypi.org/simple" }
@@ -3260,7 +3309,7 @@ wheels = [
 
 [[package]]
 name = "yera"
-version = "0.2.6"
+version = "0.2.9"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anthropic" },
@@ -3269,6 +3318,7 @@ dependencies = [
     { name = "azure-mgmt-cognitiveservices" },
     { name = "azure-mgmt-resource" },
     { name = "azure-mgmt-subscription" },
+    { name = "boto3" },
     { name = "cloudpickle" },
     { name = "dependency-injector" },
     { name = "fastapi" },
@@ -3298,14 +3348,17 @@ dependencies = [
     { name = "uvicorn" },
     { name = "virtualenv" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/0e/fa/165513ceeaa9233d5301c207b42beef42c27247b479a0aa5ac9aa3c85366/yera-0.2.6.tar.gz", hash = "sha256:62e09a416cf41ca290832026a64ab4800c5663c6029706d0936b5cd4764def6e", size = 1767779, upload-time = "2026-02-09T14:09:17.195Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/59/c2/3b8f6814ec8feb6568ab818c5b75f9a11e84212577bdb109756005803f04/yera-0.2.9.tar.gz", hash = "sha256:ffeb89c65c9a0a3351b865a82671c9a494c4d64d8c9461a910ac0fc55ed15862", size = 1773304, upload-time = "2026-02-11T12:56:35.33Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d8/66/a3ccd5523fdc51421d14673e79723edf17ee130cfce9f2ea788f8fc21233/yera-0.2.6-py3-none-any.whl", hash = "sha256:54ecf76c5e5d2bfda84e46f211b2589b2ebce4028cccfd568faec3b50ebcba67", size = 1517571, upload-time = "2026-02-09T14:09:15.699Z" },
+    { url = "https://files.pythonhosted.org/packages/d7/dc/75d4948feae4a4934fdabb4e2c3b2d616f5e3e7c0d77123bf0dfeb9e1145/yera-0.2.9-py3-none-any.whl", hash = "sha256:c78beb37c7bf6f3f4e1f3b0e63cf13c1533732edf3fc0241642a45bfed123fe9", size = 1521055, upload-time = "2026-02-11T12:56:33.978Z" },
 ]
 
 [package.optional-dependencies]
 llama-cpp = [
     { name = "llama-cpp-python" },
+]
+ollama = [
+    { name = "ollama" },
 ]
 
 [[package]]
@@ -3317,7 +3370,15 @@ dependencies = [
     { name = "jupyterlab" },
     { name = "ollama" },
     { name = "pyvis" },
+    { name = "yera" },
+]
+
+[package.dev-dependencies]
+llama-cpp = [
     { name = "yera", extra = ["llama-cpp"] },
+]
+ollama = [
+    { name = "yera", extra = ["ollama"] },
 ]
 
 [package.metadata]
@@ -3326,8 +3387,12 @@ requires-dist = [
     { name = "jupyterlab", specifier = ">=4.5.3" },
     { name = "ollama", specifier = ">=0.6.1" },
     { name = "pyvis", specifier = ">=0.3.2" },
-    { name = "yera", extras = ["llama-cpp"], specifier = ">=0.2.6" },
+    { name = "yera", specifier = ">=0.2.9" },
 ]
+
+[package.metadata.requires-dev]
+llama-cpp = [{ name = "yera", extras = ["llama-cpp"] }]
+ollama = [{ name = "yera", extras = ["ollama"] }]
 
 [[package]]
 name = "zipp"

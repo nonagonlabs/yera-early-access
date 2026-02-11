@@ -9,7 +9,9 @@ dependencies = [
     "jupyterlab>=4.5.3",
     "ollama>=0.6.1",
     "pyvis>=0.3.2",
-    "pyvis>=0.3.2",
-    "yera[llama-cpp]>=0.2.6",
+    "yera>=0.2.9",
 ]
 
+[dependency-groups]
+llama-cpp = ["yera[llama-cpp]"]
+ollama = ["yera[ollama]"]
