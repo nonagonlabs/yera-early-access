@@ -19,10 +19,9 @@ def buttons_agent():
 
     yr.markdown(f"You selected **{choice_1}**!")
 
-    with yr.markdown(
-        "Only allowing users to select from a finite set of options"
-    ) as m1:
-        m1.new_line("enforces stricter conversation flow")
+    yr.markdown(
+        "Only allowing users to select from a finite set of options enforces stricter conversation flow."
+    )
     choice_2 = yr.buttons(
         options=list_portfolios(), label="Select the portfolio you would like to manage"
     )
