@@ -10,3 +10,5 @@ tutorials/graph.html
 tutorials/lib/
 
 yera.toml
+
+.cursor/
